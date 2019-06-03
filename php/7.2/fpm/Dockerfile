@@ -99,6 +99,8 @@ COPY check-jenkins-jobs-count.sh /usr/local/bin/
 COPY connect-to-jenkins-master.sh /usr/local/bin/
 COPY docker-entrypoint.sh /usr/local/bin/
 
+RUN ln -s /usr/local/bin/php /usr/bin/php
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["php-fpm"]

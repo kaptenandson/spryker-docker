@@ -23,11 +23,11 @@ if promptYN "Do you use Amazon ECR?"; then
     echo "Please enter the following information!"
 
     read -p "Region: " region
-    region="${region:-eu-central-1}"
+    region="${region:-eu-west-1}"
     eval $(aws ecr get-login --no-include-email --region ${region})
 
     read -p "URL: " url
-    url="${url:-493499581187.dkr.ecr.eu-central-1.amazonaws.com}"
+    url="${url:-255765269647.dkr.ecr.eu-west-1.amazonaws.com}"
 else
     echo "Please enter the following information of your private docker registry!"
 
